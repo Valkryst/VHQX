@@ -2,13 +2,14 @@ package com.valkryst.VHQX;
 
 import org.junit.jupiter.api.Test;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Hqx_2xTest {
     @Test
     public void ensureGeneratedImageMatchesOriginalResult() throws IOException {
-        final var source = ImageLoader.loadImage(ImageLoader.ORIGINAL_PATH);
-        final var expectedResult = ImageLoader.loadImage(ImageLoader.HQ2X_PATH);
+        final BufferedImage source = ImageLoader.loadImage(ImageLoader.ORIGINAL_PATH);
+        final BufferedImage expectedResult = ImageLoader.loadImage(ImageLoader.HQ2X_PATH);
 
         // The HQX_2x algorithm requires the destination image to be twice the size of the source image.
         final int resultHeight = source.getHeight() * 2;

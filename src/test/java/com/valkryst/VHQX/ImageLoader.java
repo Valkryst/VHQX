@@ -3,6 +3,7 @@ package com.valkryst.VHQX;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Objects;
 
 public class ImageLoader {
@@ -14,12 +15,12 @@ public class ImageLoader {
     public static BufferedImage loadImage(final String path) throws IOException {
         Objects.requireNonNull(path);
 
-        if (path.isBlank()) {
+        if (path.isEmpty()) {
             throw new IllegalArgumentException("Filename cannot be blank.");
         }
 
         try (
-            final var inputStream = ImageLoader.class.getResourceAsStream(path)
+            final InputStream inputStream = ImageLoader.class.getResourceAsStream(path)
         ) {
             Objects.requireNonNull(inputStream);
             return ImageIO.read(inputStream);
