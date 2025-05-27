@@ -26,20 +26,4 @@ public class ImageLoader {
             return ImageIO.read(inputStream);
         }
     }
-
-    public static BufferedImage pixelsToImage(final int width, final int height, final int[] pixels) {
-        Objects.requireNonNull(pixels, "Pixels array cannot be null.");
-
-        if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException("Width and height must be positive integers.");
-        }
-
-        if (pixels.length != width * height) {
-            throw new IllegalArgumentException("Pixels array length does not match specified width and height.");
-        }
-
-        final BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-        image.setRGB(0, 0, width, height, pixels, 0, width);
-        return image;
-    }
 }
