@@ -13,6 +13,7 @@ found in that repository and thus _may_ be the intended license for it.
   * [Gradle](https://github.com/Valkryst/VHQX#-gradle)
   * [Maven](https://github.com/Valkryst/VHQX#-maven)
   * [sbt](https://github.com/Valkryst/VHQX#-scala-sbt)
+* [Example](https://github.com/Valkryst/VHQX#example)
 
 ## Introductions
 
@@ -94,4 +95,23 @@ Add VHQX as a dependency.
 
 ```
 libraryDependencies += "com.github.Valkryst" % "VHQX" % "2025.5.27"
+```
+
+## Example
+
+Though you _can_ read through the original code and use it as you wish, I have added the `VHQX` class with a 
+`scale(BufferedImage, int)` method which is capable of applying the 2x, 3x, and 4x HQX scaling algorithms to a given
+image.
+
+```java
+public class Example {
+    public static void main(final String[] args) {
+        final BufferedImage image = new BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB);
+        
+        final VHQX scaler = new VHQX();
+        final BufferedImage scaledImage2x = scaler.scale(image, 2);
+        final BufferedImage scaledImage3x = scaler.scale(image, 3);
+        final BufferedImage scaledImage4x = scaler.scale(image, 4);
+    }
+}
 ```
