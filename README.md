@@ -26,6 +26,6 @@ Like the hqxSharp project, the focus of this code is asset creation and usage in
 just an almost-direct copy of the code.
 
 For examples, go to Maxim Stepin hqx pages:
-    * [hq2x](https://web.archive.org/web/20071211205031/http://www.hiend3d.com/hq2x.html)
-    * [hq3x](https://web.archive.org/web/20071214012226/http://www.hiend3d.com/hq3x.html)
-    * [hq4x](https://web.archive.org/web/20071202070252/http://www.hiend3d.com/hq4x.html)
+* [hq2x](https://web.archive.org/web/20071211205031/http://www.hiend3d.com/hq2x.html)
+* [hq3x](https://web.archive.org/web/20071214012226/http://www.hiend3d.com/hq3x.html)
+* [hq4x](https://web.archive.org/web/20071202070252/http://www.hiend3d.com/hq4x.html)
