@@ -1,2 +1,4 @@
-bin/
-*.swp
+/.idea/
+/.mvn/
+/target/
+/out/
