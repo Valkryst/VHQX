@@ -9,6 +9,10 @@ found in that repository and thus _may_ be the intended license for it.
 * [Introductions](https://github.com/Valkryst/VHQX#introductions) 
   * [Original Introduction](https://github.com/Valkryst/VHQX#original-introduction)
   * [hqx-java Introduction](https://github.com/Valkryst/VHQX#hqx-java-introduction)
+* [Installation](https://github.com/Valkryst/VHQX#installation)
+  * [Gradle](https://github.com/Valkryst/VHQX#-gradle)
+  * [Maven](https://github.com/Valkryst/VHQX#-maven)
+  * [sbt](https://github.com/Valkryst/VHQX#-scala-sbt)
 
 ## Introductions
 
@@ -29,3 +33,65 @@ For examples, go to Maxim Stepin hqx pages:
 * [hq2x](https://web.archive.org/web/20071211205031/http://www.hiend3d.com/hq2x.html)
 * [hq3x](https://web.archive.org/web/20071214012226/http://www.hiend3d.com/hq3x.html)
 * [hq4x](https://web.archive.org/web/20071202070252/http://www.hiend3d.com/hq4x.html)
+
+## Installation
+
+VHQX is hosted on the [JitPack package repository](https://jitpack.io/#Valkryst/VHQX)
+which supports Gradle, Maven, and sbt.
+
+### ![Gradle](https://i.imgur.com/qtc6bXq.png?1) Gradle
+
+Add JitPack to your `build.gradle` at the end of repositories.
+
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+Add VHQX as a dependency.
+
+```
+dependencies {
+	implementation 'com.github.Valkryst:VHQX:2025.5.27'
+}
+```
+
+### ![Maven](https://i.imgur.com/2TZzobp.png?1) Maven
+
+Add JitPack as a repository.
+
+``` xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+Add VHQX as a dependency.
+
+```xml
+<dependency>
+    <groupId>com.github.Valkryst</groupId>
+    <artifactId>VHQX</artifactId>
+    <version>2025.5.27</version>
+</dependency>
+```
+
+### ![Scala SBT](https://i.imgur.com/Nqv3mVd.png?1) Scala SBT
+
+Add JitPack as a resolver.
+
+```
+resolvers += "jitpack" at "https://jitpack.io"
+```
+
+Add VHQX as a dependency.
+
+```
+libraryDependencies += "com.github.Valkryst" % "VHQX" % "2025.5.27"
+```
