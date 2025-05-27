@@ -57,7 +57,7 @@ Add VHQX as a dependency.
 
 ```
 dependencies {
-	implementation 'com.github.Valkryst:VHQX:2025.5.27'
+	implementation 'com.github.Valkryst:VHQX:2025.5.27-2'
 }
 ```
 
@@ -79,7 +79,7 @@ Add VHQX as a dependency.
 <dependency>
     <groupId>com.github.Valkryst</groupId>
     <artifactId>VHQX</artifactId>
-    <version>2025.5.27</version>
+    <version>2025.5.27-2</version>
 </dependency>
 ```
 
@@ -94,7 +94,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 Add VHQX as a dependency.
 
 ```
-libraryDependencies += "com.github.Valkryst" % "VHQX" % "2025.5.27"
+libraryDependencies += "com.github.Valkryst" % "VHQX" % "2025.5.27-2"
 ```
 
 ## Example
