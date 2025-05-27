@@ -8,8 +8,8 @@ import java.io.IOException;
 public class Hqx_2xTest {
     @Test
     public void ensureGeneratedImageMatchesOriginalResult() throws IOException {
-        final BufferedImage source = ImageLoader.loadImage(ImageLoader.ORIGINAL_PATH);
-        final BufferedImage expectedResult = ImageLoader.loadImage(ImageLoader.HQ2X_PATH);
+        final BufferedImage source = TestHelper.loadImage(TestHelper.ORIGINAL_PATH);
+        final BufferedImage expectedResult = TestHelper.loadImage(TestHelper.HQ2X_PATH);
 
         // The HQX_2x algorithm requires the destination image to be twice the size of the source image.
         final int resultHeight = source.getHeight() * 2;
@@ -23,19 +23,6 @@ public class Hqx_2xTest {
             source.getHeight()
         );
 
-        for (int y = 0 ; y < resultHeight; y++) {
-            for (int x = 0 ; x < resultWidth ; x++) {
-                final int pixelIndex = y * resultWidth + x;
-                if (pixelIndex >= result.length) {
-                    throw new ArrayIndexOutOfBoundsException("Pixel index out of bounds: " + pixelIndex);
-                }
-
-                final int expectedPixel = expectedResult.getRGB(x, y);
-                final int actualPixel = result[pixelIndex];
-                if (expectedPixel != actualPixel) {
-                    throw new AssertionError("Pixel mismatch at (" + x + ", " + y + "): expected " + expectedPixel + ", but got " + actualPixel);
-                }
-            }
-        }
+        TestHelper.comparePixels(expectedResult, result);
     }
 }
